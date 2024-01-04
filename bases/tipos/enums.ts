@@ -4,10 +4,15 @@
 //es solo una manera de manejar numeros entonces no permite usar strings
 (()=>{
   enum AudioLevel {
-    min,
+    min ,
     medium,
     max
   }
+  /* enum AudioLevel {
+    min = 1,
+    medium = 2,
+    max  = 3
+  } */
   let currentAudio = AudioLevel.min;
   console.log(currentAudio)
   console.log(AudioLevel)

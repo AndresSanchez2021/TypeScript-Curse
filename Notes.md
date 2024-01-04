@@ -1,3 +1,5 @@
+//Microsoft fue el creador de TypeScript
+
 **TRANSFORMAR DE TS A JS**
 *en consola*
 tsc “nombre archivo”

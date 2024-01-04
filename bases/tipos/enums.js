@@ -10,6 +10,11 @@
         AudioLevel[AudioLevel["medium"] = 1] = "medium";
         AudioLevel[AudioLevel["max"] = 2] = "max";
     })(AudioLevel || (AudioLevel = {}));
+    /* enum AudioLevel {
+      min = 1,
+      medium = 2,
+      max  = 3
+    } */
     let currentAudio = AudioLevel.min;
     console.log(currentAudio);
     console.log(AudioLevel);
