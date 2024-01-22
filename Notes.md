@@ -34,3 +34,6 @@ significa entonces que la function retornara un tipo number o void
 *ir al archivo de tscoonfig y  buscar strictNullChecks 
   -cambiar ese valor a 'false'
 
+
+
+**Que es el archivo de tsconfig y para que nos puede servir**
