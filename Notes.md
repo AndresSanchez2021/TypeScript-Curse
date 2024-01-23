@@ -36,4 +36,47 @@ significa entonces que la function retornara un tipo number o void
 
 
 
-**Que es el archivo de tsconfig y para que nos puede servir**
+**REFERENCIAR LAS LINEAS DE ERROR DE TS DIRECTAMENTE NO LAS DE JS**
+
+
+
+
+**DEPURACION DE CODIGO**
+ buscamos en el tsconfig sourceMap y le asigmamos true, finalmente lo descomentamos
+
+
+ **ELIMINAR LOS COMENTARIOS DE LA VERSION FINAL DE JS**
+ buscamos en el tsconfig removeComments y le asigmamos true, finalmente lo descomentamos
+
+
+ **EVITAR QUE TS TOME DIRECTORIOS PARA TRANSPILAR**
+  node_modules siempre esta excluido por defecto en las nuevas versiones
+
+  "exclude": [
+    'node_modules/*.ts'
+  ]
+
+
+  **INCLUIR QUE TS TOME DIRECTORIOS PARA TRANSPILAR**
+
+  "include": [
+    'node_modules/*.ts'
+  ]
+
+  
+  **OUTFILE**
+  Es molesto cunado se generan los .maps de cada archivo, cuando se trabaja con frameworks este se encarga de que se genere un unico archivo js con toda la recopilacion de la info de los TS
+
+  para que se genere ese archivo tenemos que ir al tsconfig y cambiar la siguiente linea con el nom,bre del archivo que queremos
+
+  // "outFile": "./",  ->  "outFile": "./main.js",  
+
+  tambien la linea que dice
+
+  
+  "module": "commonjs",   ->  "module": "amd", 
+
+  puede que quede un pequño error pero se deberia quitar luego (automaticamente)
+
+  si hay algo incluido con "include" entonces debemos quitarlo o modificarlo porque eso significa que eso que señalamos sera lo unico que queremos incluir, por lo cual puede generar conflictos con nuestro /main.js que acabamos de indicar 
+ 

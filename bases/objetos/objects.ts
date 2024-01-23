@@ -14,9 +14,9 @@
     las propiedades que nos pide el nuevo tipo que creamos no podemos dejarlo solo con name
   */
 
-  flash = {
-    name : "Clark Kent"
-  }
+  //flash = {
+  //  name : "Clark Kent"
+  //}
 
   /* ↑↑  Aqui podemos ver el error generado por no completar 
   los parametro que nos pedia el tipo que se acabo de crear */
